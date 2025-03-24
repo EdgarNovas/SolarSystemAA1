@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class MovingPlanet : MonoBehaviour
 {
-    float mass = 1000;
-    Vector3 velocity = new Vector3(10f, 10f);
-    Vector3 position = new Vector3(0f, 0f);
-    Vector3 acceleration = new Vector3(0f, 0f);
+    public float mass;
+    public float initialDistance;
+    public float initialVelocity;
+    //Vector3 initialPosition = new Vector3(1f, 0f);
+    //Vector3 initialVelocity = new Vector3(0f, 2 * Mathf.PI);
     public Transform sun;
-    Vector3 initialPosition = new Vector3(1f, 0f);
-    Vector3 initialVelocity = new Vector3(0f, 2 * Mathf.PI);
-    float gravityMassConstant = 4 * Mathf.PI * Mathf.PI;
-    public float totalTime = 10f;
+
+    float gravityMassConstant = 39.478f;
+    Vector3 velocity;
+    Vector3 position;
+    Vector3 acceleration;
     float timeMotion;
     public float stepTime = 0.001f;
-
-    float drag = .2f;
-
-    // Start is called before the first frame update
+    public float totalTime = 10f;
     void Start()
     {
-        transform.position = initialPosition;
-        velocity = initialVelocity;
-        position = initialPosition;
+        position = new Vector3(initialDistance, 0f, 0f);
+        transform.position = position;
+        velocity = new Vector3(0f, initialVelocity, 0f);
         timeMotion = 0f;
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeMotion < totalTime)
@@ -45,10 +42,7 @@ public class MovingPlanet : MonoBehaviour
 
     private Vector3 GravitationalAcceleration()
     {
-        //float distanceSquared = position.magnitude * position.magnitude;
-        //Vector3 unityVector = -position.normalized;
-
-        Vector3 relativePosition = transform.position - sun.position;
+        Vector3 relativePosition = position - sun.position;
         float distanceSquared = relativePosition.sqrMagnitude;
         Vector3 unityVector = -relativePosition.normalized;
 
@@ -60,8 +54,8 @@ public class MovingPlanet : MonoBehaviour
     {
         Vector3 newPosition = position + velocity * stepTime;
         Vector3 newVelocity = velocity + acceleration * stepTime;
-
         timeMotion = timeMotion + stepTime;
+
         return (newPosition, newVelocity, timeMotion);
     }
 }
