@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraZoomSettings : MonoBehaviour
 {
-    public float zoomSpeed = 50f;           // Tweak this based on your scale
+    public float zoomSpeed = 200f;           // Tweak this based on your scale
     public float minZoomDistance = 10f;     // How close you can get
     public float maxZoomDistance = 500f;    // How far you can zoom out
     public Transform target;                // The "Sun" or System Center
