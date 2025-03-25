@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 3757391737826970594, guid: 750f2acb165614a81b7accd40a4a4600,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 3757391737826970594, guid: 750f2acb165614a81b7accd40a4a4600,
         type: 3}
@@ -220,11 +220,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1959116133192384390, guid: 750f2acb165614a81b7accd40a4a4600,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1811601704}
+      addedObject: {fileID: 1811601708}
     - targetCorrespondingSourceObject: {fileID: 1959116133192384390, guid: 750f2acb165614a81b7accd40a4a4600,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1811601708}
+      addedObject: {fileID: 1811601712}
   m_SourcePrefab: {fileID: 100100000, guid: 750f2acb165614a81b7accd40a4a4600, type: 3}
 --- !u!1 &232466023 stripped
 GameObject:
@@ -232,25 +232,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1855036416}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &232466027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232466023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.000000166
-  initialDistance: 0.39
-  initialVelocity: 10.07
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.17910287, g: 0.8113208, b: 0.8113208, a: 1}
 --- !u!120 &232466031
 LineRenderer:
   serializedVersion: 2
@@ -323,7 +304,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.4245283, g: 0.12192322, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -348,7 +329,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -362,6 +343,26 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &232466035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232466023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 232466031}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.000000166
+  initialVelocity: {x: 0, y: 10.07, z: 0}
+  timeStep: 0.001
+  maxTrailPoints: 1000
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +423,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 76.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -648,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 4857882387103244631, guid: f4239e24773ed483fa3ae5cc793a7581,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4857882387103244631, guid: f4239e24773ed483fa3ae5cc793a7581,
         type: 3}
@@ -712,11 +713,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4863423981805516795, guid: f4239e24773ed483fa3ae5cc793a7581,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1462074886}
+      addedObject: {fileID: 1462074891}
     - targetCorrespondingSourceObject: {fileID: 4863423981805516795, guid: f4239e24773ed483fa3ae5cc793a7581,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1462074891}
+      addedObject: {fileID: 1462074896}
   m_SourcePrefab: {fileID: 100100000, guid: f4239e24773ed483fa3ae5cc793a7581, type: 3}
 --- !u!1001 &631401765
 PrefabInstance:
@@ -759,7 +760,7 @@ PrefabInstance:
     - target: {fileID: 7543305018288479794, guid: cc055771c9d47447e98803146cd784bd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 9.58
       objectReference: {fileID: 0}
     - target: {fileID: 7543305018288479794, guid: cc055771c9d47447e98803146cd784bd,
         type: 3}
@@ -813,11 +814,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 868836450851254543, guid: cc055771c9d47447e98803146cd784bd,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1380989354}
+      addedObject: {fileID: 1380989358}
     - targetCorrespondingSourceObject: {fileID: 868836450851254543, guid: cc055771c9d47447e98803146cd784bd,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1380989358}
+      addedObject: {fileID: 1380989362}
   m_SourcePrefab: {fileID: 100100000, guid: cc055771c9d47447e98803146cd784bd, type: 3}
 --- !u!1001 &746843267
 PrefabInstance:
@@ -850,7 +851,7 @@ PrefabInstance:
     - target: {fileID: 2792424999615109575, guid: b7a40229a37b64eceb56d448fb3085b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 2792424999615109575, guid: b7a40229a37b64eceb56d448fb3085b6,
         type: 3}
@@ -914,11 +915,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8486855503178413829, guid: b7a40229a37b64eceb56d448fb3085b6,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 979845304}
+      addedObject: {fileID: 979845308}
     - targetCorrespondingSourceObject: {fileID: 8486855503178413829, guid: b7a40229a37b64eceb56d448fb3085b6,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 979845308}
+      addedObject: {fileID: 979845312}
   m_SourcePrefab: {fileID: 100100000, guid: b7a40229a37b64eceb56d448fb3085b6, type: 3}
 --- !u!1 &832575517
 GameObject:
@@ -1081,25 +1082,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 746843267}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &979845304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979845300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.000000323
-  initialDistance: 1.52
-  initialVelocity: 5.06
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.735849, g: 0.16244212, b: 0.19075821, a: 1}
 --- !u!120 &979845308
 LineRenderer:
   serializedVersion: 2
@@ -1172,7 +1154,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0.4448824, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1197,7 +1179,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -1211,6 +1193,26 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &979845312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979845300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 979845308}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.000000323
+  initialVelocity: {x: 0, y: 5.06, z: 0}
+  timeStep: 0.001
+  maxTrailPoints: 1000
 --- !u!1001 &1309677789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1242,7 +1244,7 @@ PrefabInstance:
     - target: {fileID: 1201762178017154421, guid: 98987e73ed68c4d39a6b636a76d138f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1201762178017154421, guid: 98987e73ed68c4d39a6b636a76d138f8,
         type: 3}
@@ -1306,11 +1308,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1205357463481396627, guid: 98987e73ed68c4d39a6b636a76d138f8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1859894042}
+      addedObject: {fileID: 1859894046}
     - targetCorrespondingSourceObject: {fileID: 1205357463481396627, guid: 98987e73ed68c4d39a6b636a76d138f8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1859894046}
+      addedObject: {fileID: 1859894047}
   m_SourcePrefab: {fileID: 100100000, guid: 98987e73ed68c4d39a6b636a76d138f8, type: 3}
 --- !u!1 &1380989350 stripped
 GameObject:
@@ -1318,25 +1320,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 631401765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1380989354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380989350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.000286
-  initialDistance: 9.58
-  initialVelocity: 2.04
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.6809728, g: 0.8207547, b: 0.15021354, a: 1}
 --- !u!120 &1380989358
 LineRenderer:
   serializedVersion: 2
@@ -1409,7 +1392,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1434,7 +1417,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -1448,31 +1431,32 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1380989362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380989350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 1380989358}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.000286
+  initialVelocity: {x: 0, y: 2.04, z: 0}
+  timeStep: 0.01
+  maxTrailPoints: 1000
 --- !u!1 &1462074881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4863423981805516795, guid: f4239e24773ed483fa3ae5cc793a7581,
     type: 3}
   m_PrefabInstance: {fileID: 452880243}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1462074886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462074881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.00000245
-  initialDistance: 0.72
-  initialVelocity: 7.38
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.8679245, g: 0.5256758, b: 0.18341042, a: 1}
 --- !u!120 &1462074891
 LineRenderer:
   serializedVersion: 2
@@ -1545,7 +1529,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0.8461652, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1570,7 +1554,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -1584,6 +1568,26 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1462074896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462074881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 1462074891}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.00000245
+  initialVelocity: {x: 0, y: 7.38, z: 0}
+  timeStep: 0.001
+  maxTrailPoints: 1000
 --- !u!1 &1476975536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,25 +1699,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 61350791}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1811601704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811601700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.0009554
-  initialDistance: 5.2
-  initialVelocity: 2.75
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.7143065, g: 0.26315412, b: 0.7264151, a: 1}
 --- !u!120 &1811601708
 LineRenderer:
   serializedVersion: 2
@@ -1786,7 +1771,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.23492157, g: 1, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1811,7 +1796,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -1825,6 +1810,26 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1811601712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811601700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 1811601708}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.000955
+  initialVelocity: {x: 0, y: 2.75, z: 0}
+  timeStep: 0.01
+  maxTrailPoints: 1000
 --- !u!1001 &1855036416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1837,6 +1842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mercury
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252546993332011277, guid: f096760bd8e1a4aeca872edfde2b3c55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6068102492829646096, guid: f096760bd8e1a4aeca872edfde2b3c55,
         type: 3}
@@ -1861,7 +1871,7 @@ PrefabInstance:
     - target: {fileID: 6068102492829646096, guid: f096760bd8e1a4aeca872edfde2b3c55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 6068102492829646096, guid: f096760bd8e1a4aeca872edfde2b3c55,
         type: 3}
@@ -1915,11 +1925,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2252546993332011277, guid: f096760bd8e1a4aeca872edfde2b3c55,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 232466027}
+      addedObject: {fileID: 232466031}
     - targetCorrespondingSourceObject: {fileID: 2252546993332011277, guid: f096760bd8e1a4aeca872edfde2b3c55,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 232466031}
+      addedObject: {fileID: 232466035}
   m_SourcePrefab: {fileID: 100100000, guid: f096760bd8e1a4aeca872edfde2b3c55, type: 3}
 --- !u!1 &1859894038 stripped
 GameObject:
@@ -1927,25 +1937,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1309677789}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1859894042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859894038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba930cc83af594ba919721fb011687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 0.000003
-  initialDistance: 1
-  initialVelocity: 6.28
-  sun: {fileID: 1476975540}
-  stepTime: 0.001
-  totalTime: 10
-  orbitColor: {r: 0.17171894, g: 0.7735849, b: 0.11968666, a: 1}
 --- !u!120 &1859894046
 LineRenderer:
   serializedVersion: 2
@@ -2018,7 +2009,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.03127098, g: 0, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -2043,7 +2034,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -2057,3 +2048,23 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1859894047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859894038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319f84102e9b24e4f8ffdbab2191b3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1476975540}
+  lineRenderer: {fileID: 1859894046}
+  gravitationalConstant: 39.478
+  sunMass: 1
+  planetMass: 0.000003
+  initialVelocity: {x: 0, y: 6.28, z: 0}
+  timeStep: 0.001
+  maxTrailPoints: 1000
