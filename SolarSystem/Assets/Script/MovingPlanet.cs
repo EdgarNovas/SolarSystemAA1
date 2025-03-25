@@ -18,12 +18,22 @@ public class MovingPlanet : MonoBehaviour
     float timeMotion;
     public float stepTime = 0.001f;
     public float totalTime = 10f;
+
+
+    private LineRenderer lineRenderer;
+    private List<Vector3> trajectoryPoints = new List<Vector3>();
+    public Color orbitColor;
+
     void Start()
     {
         position = new Vector3(initialDistance, 0f, 0f);
         transform.position = position;
         velocity = new Vector3(0f, initialVelocity, 0f);
         timeMotion = 0f;
+
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.startColor = orbitColor;
+        lineRenderer.endColor = orbitColor;
     }
 
     void Update()
@@ -33,7 +43,11 @@ public class MovingPlanet : MonoBehaviour
             acceleration = GravitationalAcceleration();
             (position, velocity, timeMotion) = EulerMethod(position, velocity, acceleration, timeMotion);
             transform.position = position;
-        }
+
+            trajectoryPoints.Add(position);
+            lineRenderer.positionCount = trajectoryPoints.Count;
+            lineRenderer.SetPositions(trajectoryPoints.ToArray());
+    }
         else
         {
             return;
