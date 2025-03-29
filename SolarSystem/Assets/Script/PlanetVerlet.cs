@@ -42,6 +42,7 @@ public class PlanetVerlet : MonoBehaviour
 
     void Update()
     {
+        // Compute Gravitational Acceleration only between the Planet and the Sun
         Vector3 acceleration = ComputeGravitationalAcceleration();
 
         // Verlet Integration Step

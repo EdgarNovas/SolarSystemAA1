@@ -21,24 +21,28 @@ public class CameraZoomSettings : MonoBehaviour
 
     void Update()
     {
-        HandleZoom();
+        transform.position = HandleZoom();
     }
 
-    void HandleZoom()
+    public Vector3 HandleZoom()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
+        Vector3 direction = transform.position;
+        float newDistance = 1;
 
         if (Mathf.Abs(scroll) > 0.01f)
         {
-            Vector3 direction = (transform.position - target.position).normalized;
+            direction = (transform.position - target.position).normalized;
             float distance = Vector3.Distance(transform.position, target.position);
 
             // Compute the intended new distance
-            float newDistance = distance - scroll * zoomSpeed;
+            newDistance = distance - scroll * zoomSpeed;
             newDistance = Mathf.Clamp(newDistance, minZoomDistance, maxZoomDistance);
 
             // Update the camera's position based on the new distance
             transform.position = target.position + direction * newDistance;
         }
+
+        return target.position + direction * newDistance;
     }
 }
