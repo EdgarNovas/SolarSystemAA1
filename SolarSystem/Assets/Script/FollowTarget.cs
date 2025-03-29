@@ -18,7 +18,6 @@ public class FollowTarget : MonoBehaviour
         }
     }
 
-    // Change both the target
     public void SetTarget(Transform newTarget)
     {
         currentTarget = newTarget;
