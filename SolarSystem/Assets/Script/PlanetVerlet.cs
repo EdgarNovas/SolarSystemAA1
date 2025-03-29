@@ -15,7 +15,7 @@ public class PlanetVerlet : MonoBehaviour
 
     [Header("Simulation")]
     public float timeStep = 0.01f;
-    public int maxTrailPoints = 1000; // Prevent unlimited memory usage
+    public int maxTrailPoints = 1000;// To not use unlimited points on the trail
 
     private Vector3 currentPosition;
     private Vector3 previousPosition;
@@ -26,7 +26,7 @@ public class PlanetVerlet : MonoBehaviour
         currentPosition = transform.position;
         previousPosition = currentPosition - initialVelocity * timeStep;
 
-        // Optional LineRenderer setup
+        
         if (lineRenderer == null)
         {
             lineRenderer = gameObject.AddComponent<LineRenderer>();
@@ -52,7 +52,7 @@ public class PlanetVerlet : MonoBehaviour
         currentPosition = newPosition;
         transform.position = currentPosition;
 
-        // Update the orbit trail
+        
         UpdateOrbitTrail();
     }
 

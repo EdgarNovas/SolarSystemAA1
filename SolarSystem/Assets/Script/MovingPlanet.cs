@@ -7,8 +7,7 @@ public class MovingPlanet : MonoBehaviour
     public float mass;
     public float initialDistance;
     public float initialVelocity;
-    //Vector3 initialPosition = new Vector3(1f, 0f);
-    //Vector3 initialVelocity = new Vector3(0f, 2 * Mathf.PI);
+ 
     public Transform sun;
 
     float gravityMassConstant = 39.478f;

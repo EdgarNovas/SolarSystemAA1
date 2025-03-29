@@ -16,7 +16,7 @@ public class FollowTarget : MonoBehaviour
         }
     }
 
-    // Change both the target and the offset dynamically
+    // Change both the target and the offset
     public void SetTarget(Transform newTarget, Vector3 newOffset)
     {
         currentTarget = newTarget;
