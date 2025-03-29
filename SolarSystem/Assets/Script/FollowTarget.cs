@@ -11,6 +11,7 @@ public class FollowTarget : MonoBehaviour
         if (currentTarget != null)
         {
             Vector3 desiredPosition = currentTarget.position + offset;
+            desiredPosition.z = GetComponent<CameraZoomSettings>().HandleZoom().z;
             transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
             transform.LookAt(currentTarget);
         }
