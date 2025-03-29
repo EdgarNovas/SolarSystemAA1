@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class CameraZoomSettings : MonoBehaviour
 {
-    public float zoomSpeed = 200f;           // Tweak this based on your scale
-    public float minZoomDistance = 10f;     // How close you can get
-    public float maxZoomDistance = 500f;    // How far you can zoom out
-    public Transform target;                // The "Sun" or System Center
+    public float zoomSpeed = 200f;
+
+    // To limit how far or close you can get
+    public float minZoomDistance = 10f;     
+    public float maxZoomDistance = 500f;    
+    public Transform target;
 
     private Camera cam;
 
@@ -16,7 +18,7 @@ public class CameraZoomSettings : MonoBehaviour
             cam = Camera.main;
 
         if (target == null)
-            target = GameObject.Find("Sun").transform; // Auto-assign Sun if not set
+            target = GameObject.Find("Sun").transform; 
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class CameraZoomSettings : MonoBehaviour
         Vector3 direction = transform.position;
         float newDistance = 1;
 
-        if (Mathf.Abs(scroll) > 0.01f)
+        if (Mathf.Abs(scroll) != 0.0f)
         {
             direction = (transform.position - target.position).normalized;
             float distance = Vector3.Distance(transform.position, target.position);
@@ -38,11 +40,9 @@ public class CameraZoomSettings : MonoBehaviour
             // Compute the intended new distance
             newDistance = distance - scroll * zoomSpeed;
             newDistance = Mathf.Clamp(newDistance, minZoomDistance, maxZoomDistance);
-
-            // Update the camera's position based on the new distance
-            transform.position = target.position + direction * newDistance;
         }
 
+        // Compute the camera's new position based on the new distance
         return target.position + direction * newDistance;
     }
 }
