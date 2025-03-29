@@ -5,8 +5,8 @@ public class CameraZoomSettings : MonoBehaviour
     public float zoomSpeed = 200f;
 
     // To limit how far or close you can get
-    public float minZoomDistance = 10f;     
-    public float maxZoomDistance = 500f;    
+    public float minZoomDistance = 1f;     
+    public float maxZoomDistance = 45f;    
     public Transform target;
 
     private Camera cam;

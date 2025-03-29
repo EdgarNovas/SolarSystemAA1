@@ -526,8 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomSpeed: 10
-  minZoomDistance: 10
-  maxZoomDistance: 500
+  minZoomDistance: 1
+  maxZoomDistance: 45
   target: {fileID: 1476975540}
 --- !u!114 &330585550
 MonoBehaviour:
